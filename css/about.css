@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -68,6 +69,36 @@ header {
   z-index: 2;
 }
 
+.about-box {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua",
+    Georgia, serif;
+  font-weight: bold;
+  width: 600px;
+  width: 1000px;
+  height: 300px;
+  margin: 50px auto; /* Adds vertical space before and after the box and centers it horizontally */
+  padding: 10px;
+  border: 3px solid #000; /* Changes the border to 2px and black */
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow:
+    0px 3px 6px rgba(0, 0, 0, 0.16),
+    0px 3px 6px rgba(0, 0, 0, 0.23);
+  background-color: white; /* Fills the box with white color */
+  text-align: center; /* Centers the text inside the box */
+  display: flex; /* These three properties center the content vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+.main-body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-left: 30%;
+  margin-top: 9%;
+}
+
 main::before {
   content: "";
   position: fixed;
@@ -123,7 +154,9 @@ main.slide-in:before {
 
 body {
   background-color: #f0f0f0;
-  font-family: "Grenette Pro SemiBold";
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua",
+    Georgia, serif;
+  font-weight: bold;
   color: black;
 }
 
@@ -162,6 +195,7 @@ h1 {
 }
 
 h2 {
+  position: relative;
   text-align: center;
   font-size: 30px;
   display: block;
@@ -184,6 +218,16 @@ ul li {
   background-color: black;
   margin: 0 auto;
   padding-top: 50px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+ul li:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 ul li::after {
@@ -397,4 +441,14 @@ h1,
   to {
     opacity: 1;
   }
+}
+
+.pop-out {
+  transform: scale(1.05);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
 }
