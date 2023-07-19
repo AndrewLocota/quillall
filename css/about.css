@@ -89,6 +89,9 @@ header {
   display: flex; /* These three properties center the content vertically */
   justify-content: center;
   align-items: center;
+  transition: transform 1.3s ease-out;
+  z-index: 10;
+  position: absolute;
 }
 
 .main-body {
@@ -96,7 +99,7 @@ header {
   display: flex;
   justify-content: center;
   margin-left: 30%;
-  margin-top: 9%;
+  margin-top: 500px;
 }
 
 main::before {
@@ -195,13 +198,12 @@ h1 {
 }
 
 h2 {
-  position: relative;
-  text-align: center;
+  position: absolute;
   font-size: 30px;
   display: block;
   font-size: 2em;
-  margin-block-start: 0.67em;
-  margin-block-end: 0.67em;
+  margin-block-start: -1em;
+  margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
@@ -451,4 +453,14 @@ h1,
   transition:
     transform 0.2s ease,
     box-shadow 0.3s ease;
+}
+
+.fixed-position {
+  position: fixed;
+  top: 0;
+  transform: translateX(0);
+  width: 30%;
+  height: 60%;
+  margin-left: 5%;
+  /* Other styling as necessary */
 }

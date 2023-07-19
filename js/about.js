@@ -81,3 +81,20 @@ window.addEventListener("scroll", function () {
     symbols.classList.add("symbols-slide-out");
   }
 });
+
+$(window).scroll(function () {
+  var scrollHeight = $(window).scrollTop();
+  var targetPosition = $("ul li:first").offset().top;
+
+  if (scrollHeight >= targetPosition) {
+    $(".about-box")
+      .addClass("fixed-position")
+      .stop()
+      .animate({ top: "0" }, 300);
+  } else {
+    $(".about-box")
+      .removeClass("fixed-position")
+      .stop()
+      .animate({ top: "-1000px" }, 300);
+  }
+});
