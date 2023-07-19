@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "live-server": "^1.2.1"
+    "live-server": "^1.1.0"
   },
   "devDependencies": {
     "prettier": "3.0.0"
