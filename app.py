@@ -28,7 +28,7 @@ class ParallelChain:
 def home():
     return render_template('about.html')
 
-@app.route('/quillall')
+@app.route('/')
 def quillall():
     return render_template('QuillAll.html')
 
