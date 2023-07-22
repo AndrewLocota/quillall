@@ -28,6 +28,10 @@ class ParallelChain:
 def home():
     return render_template('about.html')
 
+@app.route('/quillall')
+def quillall():
+    return render_template('QuillAll.html')
+
 @app.route('/api/summarize', methods=['POST', 'OPTIONS'])
 def summarize():
     if request.method == 'OPTIONS':
