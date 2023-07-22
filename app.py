@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 import logging
 import os
 
-logging.basicConfig(filename='/app.log', level=logging.INFO)
+logging.basicConfig(filename='app.log', level=logging.INFO)
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/summarize": {"origins": "http://127.0.0.1:5500"}})
