@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, make_response
+from flask import Flask, request, jsonify, make_response, render_template
 from langchain.llms import OpenAI
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
@@ -23,6 +23,10 @@ class ParallelChain:
             futures = [executor.submit(chain.run, input) for chain, input in zip(self.chains, inputs)]
             outputs = [future.result() for future in futures]
         return outputs
+    
+@app.route('/')
+def home():
+    return render_template('about.html')
 
 @app.route('/api/summarize', methods=['POST', 'OPTIONS'])
 def summarize():
