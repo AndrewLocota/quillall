@@ -26,7 +26,7 @@ class ParallelChain:
     
 @app.route('/')
 def home():
-    return render_template('about.html')
+    return render_template('/templates/about.html')
 
 @app.route('/api/summarize', methods=['POST', 'OPTIONS'])
 def summarize():
