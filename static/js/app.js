@@ -1,5 +1,5 @@
 $(function () {
-  fetch("/demographics.json")
+  fetch("demographics.json")
     .then((response) => response.json())
     .then((demographics) => {
       $("#demographic-input").autocomplete({
@@ -13,7 +13,7 @@ var clearAllButton = $("#clear-all");
 var demographicList = $("#demographic-list");
 var demographicsData;
 
-fetch("/demographics.json")
+fetch("demographics.json")
   .then((response) => response.json())
   .then((demographics) => {
     $("#demographic-input").autocomplete({
@@ -90,6 +90,14 @@ $("#submit-article").click(function () {
   $("#demographic-list li").each(function () {
     demographics.push($(this).find(".demographic-text").text());
   });
+
+  // If the article input is empty, shake the submit button and return
+  if (!article.trim()) {
+    $(this).addClass("shake");
+    // Remove the shake class after the animation ends (100ms)
+    setTimeout(() => $(this).removeClass("shake"), 100);
+    return; // this will prevent the execution of the code below if the article input is empty
+  }
 
   console.log("Sending data:", {
     article: article,

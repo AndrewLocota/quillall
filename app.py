@@ -24,7 +24,7 @@ class ParallelChain:
             outputs = [future.result() for future in futures]
         return outputs
     
-@app.route('/')
+@app.route('/home')
 def home():
     return render_template('about.html')
 
