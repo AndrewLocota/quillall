@@ -94,8 +94,8 @@ $("#submit-article").click(function () {
   // If the article input is empty, shake the submit button and return
   if (!article.trim()) {
     $(this).addClass("shake");
-    // Remove the shake class after the animation ends (100ms)
-    setTimeout(() => $(this).removeClass("shake"), 100);
+    // Remove the shake class after the animation ends (350ms)
+    setTimeout(() => $(this).removeClass("shake"), 350);
     return; // this will prevent the execution of the code below if the article input is empty
   }
 

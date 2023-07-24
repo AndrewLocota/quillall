@@ -9,6 +9,7 @@ window.onload = function () {
 };
 
 var items = document.querySelectorAll("li");
+var targetPosition;
 
 function isItemInView(item) {
   var rect = item.getBoundingClientRect();
@@ -21,6 +22,15 @@ function callbackFunc() {
   for (var i = 0; i < items.length; i++) {
     if (isItemInView(items[i])) {
       items[i].classList.add("show");
+
+      // Check if the first "ul" element has just received the "show" class
+      if (
+        items[i] === document.querySelector("ul li:first") &&
+        !targetPosition
+      ) {
+        // Store the current scroll position as the target position
+        targetPosition = window.pageYOffset;
+      }
     }
   }
 }
@@ -74,27 +84,28 @@ window.addEventListener("scroll", function () {
     main.classList.remove("slide-out");
     symbols.classList.add("symbols-slide-in");
     symbols.classList.remove("symbols-slide-out");
+
+    // Check if 'slide-in' class is present
+    if (main.classList.contains("slide-in")) {
+      // Animate the 'about-box' to the top
+      $(".about-box")
+        .addClass("fixed-position")
+        .stop()
+        .animate({ top: "0" }, 450, "linear");
+    }
   } else {
     main.classList.remove("slide-in");
     main.classList.add("slide-out");
     symbols.classList.remove("symbols-slide-in");
     symbols.classList.add("symbols-slide-out");
-  }
-});
 
-$(window).scroll(function () {
-  var scrollHeight = $(window).scrollTop();
-  var targetPosition = $("ul li:first").offset().top;
-
-  if (scrollHeight >= targetPosition) {
-    $(".about-box")
-      .addClass("fixed-position")
-      .stop()
-      .animate({ top: "0" }, 300);
-  } else {
-    $(".about-box")
-      .removeClass("fixed-position")
-      .stop()
-      .animate({ top: "-1000px" }, 300);
+    // Check if 'slide-out' class is present
+    if (main.classList.contains("slide-out")) {
+      // Animate the 'about-box' to its original position
+      $(".about-box")
+        .removeClass("fixed-position")
+        .stop()
+        .animate({ top: "48%" }, 500, "linear"); // replace '10px' with the actual original top position of the 'about-box'
+    }
   }
 });
