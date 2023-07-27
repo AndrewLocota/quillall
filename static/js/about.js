@@ -1,6 +1,8 @@
 window.onload = function () {
   // Prevent scrolling
   document.body.style.overflow = "hidden";
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0;
 
   // After 2 seconds, allow scrolling
   setTimeout(function () {
@@ -8,37 +10,33 @@ window.onload = function () {
   }, 2000);
 };
 
+// Initialize ScrollMagic controller
+var controller = new ScrollMagic.Controller();
+
 var items = document.querySelectorAll("li");
-var targetPosition;
+var aboutBox = document.querySelector(".about-box");
 
-function isItemInView(item) {
-  var rect = item.getBoundingClientRect();
-  var windowHeight =
-    window.innerHeight || document.documentElement.clientHeight;
-  return rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2;
-}
+// Create a scene for each item
+items.forEach(function (item, index) {
+  new ScrollMagic.Scene({
+    triggerElement: item, // trigger animation when this element is in view
+    duration: "100%", // animate for the duration of 100% of the viewport height
+  })
+    .setClassToggle(item, "show") // add class 'show' to item
+    .on("enter", function () {
+      // When the item enters the viewport, update the about box content
+      aboutBox.textContent = "Content for item " + (index + 1);
+    })
+    .addTo(controller); // assign this scene to our ScrollMagic Controller
+});
 
-function callbackFunc() {
-  for (var i = 0; i < items.length; i++) {
-    if (isItemInView(items[i])) {
-      items[i].classList.add("show");
-
-      // Check if the first "ul" element has just received the "show" class
-      if (
-        items[i] === document.querySelector("ul li:first") &&
-        !targetPosition
-      ) {
-        // Store the current scroll position as the target position
-        targetPosition = window.pageYOffset;
-      }
-    }
-  }
-}
-
-// listen for events
-window.addEventListener("load", callbackFunc);
-window.addEventListener("resize", callbackFunc);
-window.addEventListener("scroll", callbackFunc);
+// Create a scene for the first ul element
+new ScrollMagic.Scene({
+  triggerElement: "ul:first-of-type", // trigger animation when the first ul is in view
+  duration: "200%", // animate for the duration of 200% of the viewport height
+})
+  .setClassToggle(".about-box", "fixed-position") // add class 'fixed-position' to .about-box
+  .addTo(controller); // assign this scene to our ScrollMagic Controller
 
 document.querySelector(".navbar").classList.add("hidden");
 window.addEventListener("scroll", function () {
@@ -72,40 +70,4 @@ window.addEventListener("scroll", function () {
     blurValue = Math.min(scrollPosition / 100, 6); // Change these values to adjust blur effect
   document.querySelector(".stretchy-header").style.filter =
     "blur(" + blurValue + "px)";
-});
-
-window.addEventListener("scroll", function () {
-  var main = document.querySelector("main");
-  var symbols = document.querySelector("#symbols");
-  var headerHeight = document.querySelector("header").offsetHeight;
-
-  if (window.pageYOffset > headerHeight) {
-    main.classList.add("slide-in");
-    main.classList.remove("slide-out");
-    symbols.classList.add("symbols-slide-in");
-    symbols.classList.remove("symbols-slide-out");
-
-    // Check if 'slide-in' class is present
-    if (main.classList.contains("slide-in")) {
-      // Animate the 'about-box' to the top
-      $(".about-box")
-        .addClass("fixed-position")
-        .stop()
-        .animate({ top: "0" }, 450, "linear");
-    }
-  } else {
-    main.classList.remove("slide-in");
-    main.classList.add("slide-out");
-    symbols.classList.remove("symbols-slide-in");
-    symbols.classList.add("symbols-slide-out");
-
-    // Check if 'slide-out' class is present
-    if (main.classList.contains("slide-out")) {
-      // Animate the 'about-box' to its original position
-      $(".about-box")
-        .removeClass("fixed-position")
-        .stop()
-        .animate({ top: "48%" }, 500, "linear"); // replace '10px' with the actual original top position of the 'about-box'
-    }
-  }
 });

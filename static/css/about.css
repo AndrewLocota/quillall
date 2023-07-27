@@ -34,7 +34,7 @@ html {
 
 body {
   font-family: "Grenette Pro SemiBold", Arial, sans-serif;
-  background: linear-gradient(to bottom, #f0f0f0 0%, #fafdf6 50%, #e4e3d3 100%);
+  background: linear-gradient(to bottom, #f0f0f0 0%, #fafdf6 50%, #dad9cd 100%);
   margin: 0;
   /* Remove default margin */
   overflow-x: hidden;
@@ -163,7 +163,7 @@ h1 {
   text-align: center;
   font-size: 40px;
   display: block;
-  font-size: 2em;
+  font-size: 3em;
   margin-block-start: 0.67em;
   margin-block-end: 0.67em;
   margin-inline-start: 0px;
@@ -173,7 +173,6 @@ h1 {
 }
 
 #logo {
-  height: 65px;
   margin-right: 5px;
   position: relative;
   animation: move-logo 2.3s 0s forwards; /* Increase the total duration of the animation */
@@ -215,7 +214,7 @@ ul li {
   width: 6px;
   background-color: black;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 100px;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
@@ -443,8 +442,8 @@ h1,
 
 .fixed-position {
   position: fixed;
-  margin-top: 10%;
-  transform: translateX(0);
+  top: 50%; /* position it at 50% from the top */
+  transform: translateY(-60%); /* move it up by half of its height */
   width: 30%;
   height: 60%;
   margin-left: 5%;
