@@ -941,3 +941,152 @@ INFO:werkzeug: * Detected change in 'c:\\Users\\Elron\\Downloads\\QuillAll_files
 INFO:werkzeug: * Restarting with watchdog (windowsapi)
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:root:Received request data: {'article': 'Please remember that you need to include Quill\'s CSS and JS files in your HTML file. Also, replace the textarea with id="article-input" with a div.', 'demographics': ['Beginner programmers', 'Expert programmers']}
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2023 01:07:31] "POST /api/summarize HTTP/1.1" 200 -
+INFO:root:Received request data: {'article': '{"time":1690511001084,"blocks":[{"id":"DaqAA3-0EW","type":"paragraph","data":{"text":"ould you rewrite this&gt;"}}],"version":"2.27.2"}', 'demographics': ['Dummies']}
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2023 03:23:22] "POST /api/summarize HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\client.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\connector.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\client_exceptions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\client_reqrep.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\client_ws.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\cookiejar.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\formdata.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\helpers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\http.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\http_writer.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\http_websocket.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\multipart.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\payload.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\payload_streamer.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\resolver.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\streams.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\aiohttp\\tracing.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\vegalite\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\vegalite\\v5\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\vegalite\\v5\\schema\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\vegalite\\v5\\schema\\core.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\vegalite\\v5\\schema\\channels.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\vegalite\\v5\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\utils\\schemapi.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\utils\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\utils\\core.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\vegalite\\v5\\data.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\vegalite\\v5\\display.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\vegalite\\v5\\theme.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\expr\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\expr\\funcs.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\expr\\consts.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\expr\\core.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\vegalite\\data.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\altair\\utils\\data.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\apiclient\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\async_timeout\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\blinker\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\blinker\\base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\certifi\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\certifi\\core.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\chardet\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\chardet\\universaldetector.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\chardet\\version.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\charset_normalizer\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\charset_normalizer\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\charset_normalizer\\legacy.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\charset_normalizer\\models.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\charset_normalizer\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\charset_normalizer\\version.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\click\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\click\\core.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\click\\decorators.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\click\\exceptions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\click\\formatting.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\click\\globals.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\click\\parser.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\click\\termui.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\click\\types.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\click\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\cssselect\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\cssselect\\parser.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\cssselect\\xpath.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\dataclasses_json\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\dataclasses_json\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\dataclasses_json\\cfg.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pydantic\\version.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pydeck\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pympler\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pyparsing\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pyparsing\\util.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pyparsing\\exceptions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pyparsing\\actions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pyparsing\\results.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pyparsing\\helpers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pyparsing\\unicode.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pytz_deprecation_shim\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pytz_deprecation_shim\\_exceptions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pytz_deprecation_shim\\_impl.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\readability\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\rich\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\rsa\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\rsa\\key.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\rsa\\pkcs1.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\smmap\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\soupsieve\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\soupsieve\\util.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\streamlit\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\streamlit\\echo.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\streamlit\\elements\\spinner.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\streamlit\\commands\\page_config.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\streamlit\\commands\\execution_control.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\tenacity\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\tenacity\\retry.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\tenacity\\nap.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\tenacity\\stop.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\tenacity\\wait.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\tenacity\\before.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\tenacity\\after.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\tenacity\\before_sleep.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\tenacity\\_asyncio.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\tiktoken\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\tiktoken\\core.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\tiktoken\\model.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\tiktoken\\registry.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\tlz\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\toolz\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\tzdata\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\uritemplate\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\uritemplate\\api.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\uritemplate\\template.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\validators\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\validators\\card.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\validators\\extremes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\validators\\hashes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\validators\\i18n\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\validators\\i18n\\fi.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\validators\\ip_address.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\validators\\utils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\watchdog\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\websocket\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\werkzeug\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\werkzeug\\serving.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\werkzeug\\test.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\zipp\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pythonwin\\pywin\\__init__.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:root:Received request data: {'article': 'sadasdasd\nsdsadas\nsdas', 'demographics': ['Rewr']}
+INFO:werkzeug:127.0.0.1 - - [28/Jul/2023 03:44:30] "POST /api/summarize HTTP/1.1" 200 -

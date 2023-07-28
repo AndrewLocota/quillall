@@ -11,6 +11,10 @@
     <link rel="icon" href="/images/favicon.png" type="image/png" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/paragraph@latest"></script>
   </head>
 
   <body>
@@ -46,9 +50,11 @@
           <div id="fixed-part">
             <h2>Enter Your Article</h2>
           </div>
-          <textarea id="article-input" rows="10" cols="50"></textarea>
+
+          <!-- This div will be used as the container for the Editor.js instance -->
+          <div id="article-input"></div>
+
           <div id="response-container" style="display: none"></div>
-          <!-- This will replace the textarea -->
           <div class="loader" id="loader" style="display: none"></div>
           <div id="counter">0/4000</div>
           <button id="submit-article">Submit</button>
