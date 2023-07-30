@@ -23,6 +23,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #000000;
 }
 
 @font-face {
@@ -34,9 +35,14 @@ html {
 
 body {
   font-family: "Grenette Pro SemiBold", Arial, sans-serif;
-  background: linear-gradient(to bottom, #f0f0f0 0%, #fafdf6 50%, #dad9cd 100%);
+  background: linear-gradient(
+    to bottom,
+    black 0%,
+    black 29.99%,
+    #f0f0f0 30%,
+    #f0f0f0 100%
+  );
   margin: 0;
-  /* Remove default margin */
   overflow-x: hidden;
 }
 
@@ -88,6 +94,8 @@ header {
   transition: transform 1.3s ease-out;
   z-index: 10;
   position: absolute;
+  color: #000;
+  overflow: hidden;
 }
 
 .main-body {
@@ -197,7 +205,6 @@ h2 {
   font-size: 30px;
   display: block;
   font-size: 2em;
-  margin-block-start: -1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
@@ -212,7 +219,7 @@ ul li {
   position: relative;
   list-style-type: none;
   width: 6px;
-  background-color: black;
+  background-color: #000000;
   margin: 0 auto;
   padding-top: 100px;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
@@ -224,7 +231,7 @@ ul li:hover {
 }
 
 ul li::after {
-  background: black;
+  background: #000000;
   content: "";
   width: 25px;
   height: 25px;
@@ -277,15 +284,17 @@ ul li.show div {
   transform: none;
   visibility: visible;
   opacity: 1;
+  color: #000;
 }
 
 @media screen and (max-width: 900px) {
   ul li div {
     width: 250px;
+    color: #f0f0f0;
   }
   ul li:nth-child(even) div {
     left: -289px;
-    /*250+45-6*/
+    color: #f0f0f0;
   }
 }
 
@@ -368,14 +377,14 @@ header {
 
 .stretchy-header,
 .stretchy-header::before {
-  position: absolute; /* Adjusted from relative to absolute */
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   background: url("/static/images/wallofhandwriting.png") repeat-x;
   background-size: auto 105%;
-  animation: scroll-right 30s linear infinite, blur 3s 1s forwards;
+  animation: scroll-right 30s linear infinite;
   z-index: 1;
 }
 
@@ -383,6 +392,19 @@ header {
   content: "";
   animation-delay: 0, 1.5s;
   z-index: 2;
+}
+
+.stretchy-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/static/images/wallofhandwriting.png") repeat-x;
+  background-size: auto 105%;
+  filter: blur(4px);
+  z-index: -1;
 }
 
 h1,
@@ -447,4 +469,9 @@ h1,
   width: 30%;
   height: 60%;
   margin-left: 5%;
+}
+
+.stretchy-header.blurred {
+  filter: blur(4px);
+  mask-image: linear-gradient(to top, black 50%, transparent 50%);
 }

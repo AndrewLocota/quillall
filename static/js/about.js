@@ -64,10 +64,3 @@ window.addEventListener("wheel", function (e) {
     document.querySelector("#loading").style.bottom = "-200px";
   }
 });
-
-window.addEventListener("scroll", function () {
-  var scrollPosition = window.pageYOffset,
-    blurValue = Math.min(scrollPosition / 100, 6); // Change these values to adjust blur effect
-  document.querySelector(".stretchy-header").style.filter =
-    "blur(" + blurValue + "px)";
-});
