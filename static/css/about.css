@@ -38,8 +38,8 @@ body {
   background: linear-gradient(
     to bottom,
     black 0%,
-    black 29.99%,
-    #f0f0f0 30%,
+    black 31.99%,
+    #f0f0f0 32%,
     #f0f0f0 100%
   );
   margin: 0;
@@ -204,15 +204,16 @@ h2 {
   position: absolute;
   font-size: 30px;
   display: block;
-  font-size: 2em;
+  font-size: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
+  padding-top: 15vh;
 }
 
 ul {
-  padding: 50px 0;
+  padding: 20vh;
 }
 
 ul li {
@@ -392,6 +393,8 @@ header {
   content: "";
   animation-delay: 0, 1.5s;
   z-index: 2;
+  background-size: auto 105%;
+  filter: blur(4px);
 }
 
 .stretchy-header::after {
@@ -404,13 +407,35 @@ header {
   background: url("/static/images/wallofhandwriting.png") repeat-x;
   background-size: auto 105%;
   filter: blur(4px);
+  background-size: auto 105%;
   z-index: -1;
+}
+
+.masked::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/static/images/mask\ about.png") no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 1s;
+  scale: 105%;
+}
+
+.fade-in::after {
+  opacity: 1; /* Full visibility */
 }
 
 h1,
 .nav-button {
   opacity: 0;
   animation: fade-in 1s 1.5s forwards; /* Animation will start 1s after the page loads */
+  z-index: 6;
 }
 
 @keyframes scroll-right {
@@ -425,12 +450,19 @@ h1,
 @keyframes blur {
   to {
     filter: blur(4px);
+    background-size: auto 105%;
   }
 }
 
 @keyframes shrink {
   to {
-    height: 450px;
+    height: 50vh;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
   }
 }
 
@@ -450,12 +482,6 @@ h1,
   z-index: 4; /* Raised from 5 to 4 */
 }
 
-@keyframes fade-in {
-  to {
-    opacity: 1;
-  }
-}
-
 .pop-out {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -469,9 +495,4 @@ h1,
   width: 30%;
   height: 60%;
   margin-left: 5%;
-}
-
-.stretchy-header.blurred {
-  filter: blur(4px);
-  mask-image: linear-gradient(to top, black 50%, transparent 50%);
 }

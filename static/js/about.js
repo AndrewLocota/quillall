@@ -8,6 +8,21 @@ window.onload = function () {
   setTimeout(function () {
     document.body.style.overflow = "auto";
   }, 2000);
+
+  // After 1 second, add the 'shrink' class to the '.stretchy-header' element
+  setTimeout(function () {
+    document.querySelector(".stretchy-header").classList.add("shrink");
+  }, 1000);
+
+  // After 1 second, add the 'masked' class to the '.stretchy-header' element
+  setTimeout(function () {
+    document.querySelector(".stretchy-header").classList.add("masked");
+  }, 1000);
+
+  // After 2 seconds, add the 'fade-in' class to the '.stretchy-header.masked' element
+  setTimeout(function () {
+    document.querySelector(".stretchy-header.masked").classList.add("fade-in");
+  }, 1000);
 };
 
 // Initialize ScrollMagic controller
