@@ -2,7 +2,15 @@
 <html>
   <head>
     <title>QuillAll</title>
+    <!-- Add Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+    <link rel="icon" href="/static/images/favicon.png" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -15,58 +23,81 @@
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/paragraph@latest"></script>
+    <!-- Add Bootstrap JS and Popper.js just before closing body tag -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
-    <header>
-      <h1>QuillAll</h1>
-      <img src="/static/images/logo.png" alt="Logo" id="logo" />
-      <button class="nav-button">
-        <a href="/home">About</a>
-      </button>
-    </header>
-    <main>
-      <img src="/static/images/symbols.png" id="symbols" />
-      <section id="demographics">
-        <h2>Demographics</h2>
-        <input
-          list="demographics-list"
-          type="text"
-          id="demographic-input"
-          placeholder="Enter a demographic"
-        />
-        <datalist id="demographics-list">
-          <!-- Demographics options will be added here -->
-        </datalist>
-        <button id="add-demographic">Add</button>
-        <button id="clear-all" class="fade">Clear All</button>
+    <div class="container-fluid">
+      <header class="row">
+        <h1>QuillAll</h1>
+        <img src="/static/images/logo.png" alt="Logo" id="logo" />
+        <button class="nav-button">
+          <a href="/home">About</a>
+        </button>
+      </header>
+      <main class="row">
+        <img src="/static/images/symbols.png" id="symbols" />
+        <div class="col-md-3">
+          <section id="demographics">
+            <div style="position: relative">
+              <h2 style="position: absolute">Demographics</h2>
+              <input
+                list="demographics-list"
+                type="text"
+                id="demographic-input"
+                placeholder="Enter a demographic"
+              />
+            </div>
+            <datalist id="demographics-list">
+              <!-- Demographics options will be added here -->
+            </datalist>
+            <button id="add-demographic">Add</button>
+            <button id="clear-all" class="fade">Clear All</button>
+            <ul id="demographic-list">
+              <!-- Demographics will be added here -->
+            </ul>
+          </section>
+        </div>
+        <div class="col-md-5">
+          <section id="input">
+            <!-- This div will be used as the container for the Editor.js instance -->
+            <div id="article-input" style="position: relative">
+              <div id="fixed-part" style="position: absolute">
+                <h3>Enter Your Article</h3>
+              </div>
+            </div>
 
-        <ul id="demographic-list">
-          <!-- Demographics will be added here -->
-        </ul>
-      </section>
-      <div id="container">
-        <section id="input">
-          <div id="fixed-part">
-            <h2>Enter Your Article</h2>
-          </div>
-
-          <!-- This div will be used as the container for the Editor.js instance -->
-          <div id="article-input"></div>
-
-          <div id="response-container" style="display: none"></div>
-          <div class="loader" id="loader" style="display: none"></div>
-          <div id="counter">0/4000</div>
-          <button id="submit-article">Submit</button>
-          <button id="refresh-page" class="refresh-button">
-            <i class="fas fa-sync-alt"></i>
-          </button>
-        </section>
-      </div>
-    </main>
-    <footer>
-      <!-- Footer content goes here -->
-    </footer>
+            <div id="response-container" style="display: none"></div>
+            <div class="loader" id="loader" style="display: none"></div>
+            <div id="counter">0/4000</div>
+            <button id="submit-article">Submit</button>
+            <button id="refresh-page" class="refresh-button">
+              <i class="fas fa-sync-alt"></i>
+            </button>
+          </section>
+        </div>
+      </main>
+      <footer class="row">
+        <div class="col-12">
+          <!-- Footer content goes here -->
+        </div>
+      </footer>
+    </div>
     <script defer type="module" src="/static/js/app.js"></script>
   </body>
 </html>

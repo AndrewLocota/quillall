@@ -14,7 +14,7 @@ body {
 }
 
 header {
-  padding: 20px;
+  padding: 2rem;
   margin-right: auto;
   text-align: left;
   font-family: "Grenette Pro SemiBold", Arial, sans-serif;
@@ -25,10 +25,8 @@ header {
   position: sticky;
   /* Make it stick to the top */
   top: 0;
-  z-index: 1000;
+  z-index: 5;
   /* Ensure it stays on top */
-  width: 100%;
-  /* Make it span the entire width */
   display: flex;
   align-items: center;
   user-select: none;
@@ -37,7 +35,6 @@ header {
 #logo {
   height: 65px;
   margin-right: 10px;
-  /* Adjust as needed */
 }
 
 #symbols {
@@ -47,14 +44,13 @@ header {
   bottom: 0;
   margin: -13px;
   width: 66px;
-  z-index: 2;
+  z-index: 3;
   /* Make sure it's on top of the line */
 }
 
 main {
   display: flex;
   justify-content: space-around;
-  margin-right: 10%;
   line-height: 1;
   position: relative;
   /* Added for the pseudo-element */
@@ -86,18 +82,14 @@ section {
 }
 
 #input {
-  position: sticky;
   flex-grow: 2;
   display: block;
   flex-direction: column;
   align-items: center;
-  top: 0;
-  margin-left: 0%;
   user-select: none;
 }
 
 #article-input {
-  position: sticky;
   width: 600px;
   height: 600px;
   margin-top: 10%;
@@ -107,7 +99,6 @@ section {
 
 #article-input,
 #demographic-input {
-  position: sticky;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -121,24 +112,24 @@ section {
 #fixed-part {
   position: absolute;
   align-items: center;
-  width: 100;
-  /* Adjust as needed */
+  padding-top: -50px;
   margin-top: -10%;
   margin-bottom: 0;
-  margin-left: 0;
+  margin-left: -1%;
   margin-right: 0;
+  font-family: "Grenette Pro SemiBold", Arial, sans-serif;
+  scale: 105%;
 }
 
 footer {
   padding: 20px;
   text-align: center;
   font-family: "Grenette Pro SemiBold", monospace;
-  /* Changed font */
 }
 
 #demographic-input {
-  width: 100%;
-  margin-right: 5%;
+  width: 20rem;
+  margin-top: 1rem;
 }
 
 #submit-article,
@@ -276,16 +267,19 @@ footer {
 }
 
 #demographics {
-  width: 25%;
-  margin-left: 0%;
-  /* Moved a bit more to the right */
+  padding-top: 3.8rem;
+  scroll-padding-left: 50px;
+  width: 100px;
   user-select: none;
 }
 
-#container {
-  display: absolute;
-  /* Use flexbox for layout */
-  overflow: visible;
+#demographics h2 {
+  margin-top: -30%;
+  margin-bottom: 2rem;
+  margin-left: -10%;
+  margin-right: 0;
+  font-family: "Grenette Pro SemiBold", Arial, sans-serif;
+  scale: 90%;
 }
 
 #input,
