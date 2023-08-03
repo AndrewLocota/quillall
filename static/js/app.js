@@ -71,12 +71,14 @@ $(function () {
             li.remove();
             if (!demographicList.hasChildNodes()) {
               clearAllButton.removeClass("show");
+              $("#demographic-list-wrapper").addClass("invisible");
             }
           });
 
         li.append(remove);
         demographicList.append(li);
         clearAllButton.addClass("show");
+        $("#demographic-list-wrapper").removeClass("invisible");
       }
     });
   });
@@ -91,6 +93,20 @@ $(function () {
   $("#clear-all").click(function () {
     demographicList.empty();
     clearAllButton.removeClass("show");
+    $("#demographic-list-wrapper").addClass("invisible");
+  });
+
+  $("#demographic-input").keypress(function (e) {
+    if (e.which == 13) {
+      e.preventDefault();
+      $("#add-demographic").click();
+    }
+  });
+
+  $("#clear-all").click(function () {
+    demographicList.empty();
+    clearAllButton.removeClass("show");
+    updateDemographicsWrapper(); // Call function here when all demographics are cleared
   });
 
   $("#submit-article").click(function () {

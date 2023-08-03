@@ -11,6 +11,7 @@ body {
   margin: 0;
   /* Remove default margin */
   overflow-x: hidden;
+  position: relative;
 }
 
 header {
@@ -19,7 +20,6 @@ header {
   text-align: left;
   font-family: "Grenette Pro SemiBold", Arial, sans-serif;
   background-color: #e8e9eb;
-  /* Background color for the header */
   box-shadow: 40px 3px 6px rgba(0, 0, 0, 0.16), 40px 3px 6px rgba(0, 0, 0, 0.23);
   /* Slight shadow on the left side only */
   position: sticky;
@@ -27,6 +27,7 @@ header {
   top: 0;
   z-index: 5;
   /* Ensure it stays on top */
+  width: auto 100%;
   display: flex;
   align-items: center;
   user-select: none;
@@ -55,6 +56,7 @@ main {
   position: relative;
   /* Added for the pseudo-element */
   user-select: none;
+  padding-left: 50px;
 }
 
 main::before {
@@ -81,14 +83,6 @@ section {
   /* Changed font */
 }
 
-#input {
-  flex-grow: 2;
-  display: block;
-  flex-direction: column;
-  align-items: center;
-  user-select: none;
-}
-
 #article-input {
   width: 600px;
   height: 600px;
@@ -101,7 +95,7 @@ section {
 #demographic-input {
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
   box-sizing: border-box;
   margin-bottom: 16px;
   resize: none;
@@ -128,11 +122,20 @@ footer {
 }
 
 #demographic-input {
-  width: 20rem;
+  width: 30rem;
   margin-top: 1rem;
 }
 
-#submit-article,
+#submit-article {
+  background-color: #00008b;
+  color: #fafdf6;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
 #add-demographic {
   background-color: #00008b;
   color: #fafdf6;
@@ -140,8 +143,9 @@ footer {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 10px;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
+  margin-left: 2vh;
+  height: 40px;
 }
 
 #submit-article:hover,
@@ -199,12 +203,32 @@ footer {
   }
 }
 
+.demographic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#demographic-list-wrapper {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 1vh;
+  resize: none;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  background-color: white;
+  display: inline-block;
+}
+
 #demographic-list {
   list-style-type: none;
-  padding: 0;
-  display: flex;
+  padding: 5px;
   flex-wrap: wrap;
   gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 5px;
 }
 
 .demographic-item {
@@ -245,13 +269,15 @@ footer {
 
 #clear-all {
   display: none;
-  margin-top: 10px;
   background-color: grey;
   color: white;
-  padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  height: 40px;
+  width: 80px;
+  margin-left: 2vh;
+  text-align: center;
 }
 
 #clear-all.show {
@@ -271,12 +297,14 @@ footer {
   scroll-padding-left: 50px;
   width: 100px;
   user-select: none;
+  justify-content: space-between; /* This will add space around items */
+  align-items: center; /* This will center items vertically */
 }
 
 #demographics h2 {
-  margin-top: -30%;
-  margin-bottom: 2rem;
-  margin-left: -10%;
+  margin-top: -4vh;
+  margin-bottom: 0;
+  margin-left: -9%;
   margin-right: 0;
   font-family: "Grenette Pro SemiBold", Arial, sans-serif;
   scale: 90%;
@@ -284,11 +312,9 @@ footer {
 
 #input,
 #responses {
+  position: absolute; /* This makes the top property work */
   transition: all 0.75s ease;
-  /* Smooth transition */
-  width: 100%;
   overflow: visible;
-  /* Add scrollbars if necessary */
 }
 
 #article-input.minimized {
@@ -440,4 +466,8 @@ textarea[hidden] {
   backface-visibility: hidden;
   perspective: 1000px;
   transform-origin: center;
+}
+
+.invisible {
+  opacity: 0;
 }

@@ -52,25 +52,37 @@
       </header>
       <main class="row">
         <img src="/static/images/symbols.png" id="symbols" />
-        <div class="col-md-3">
+        <div class="col-md-4">
           <section id="demographics">
-            <div style="position: relative">
-              <h2 style="position: absolute">Demographics</h2>
+            <h2>Demographics</h2>
+            <div class="demographic-header">
               <input
                 list="demographics-list"
                 type="text"
                 id="demographic-input"
                 placeholder="Enter a demographic"
               />
+              <div
+                class="button-container"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <button id="add-demographic">Add</button>
+                <button id="clear-all" class="fade">Clear All</button>
+              </div>
             </div>
-            <datalist id="demographics-list">
-              <!-- Demographics options will be added here -->
-            </datalist>
-            <button id="add-demographic">Add</button>
-            <button id="clear-all" class="fade">Clear All</button>
-            <ul id="demographic-list">
-              <!-- Demographics will be added here -->
-            </ul>
+            <div id="demographic-list-wrapper" class="invisible">
+              <datalist id="demographics-list">
+                <!-- Demographics options will be added here -->
+              </datalist>
+
+              <ul id="demographic-list">
+                <!-- Demographics will be added here -->
+              </ul>
+            </div>
           </section>
         </div>
         <div class="col-md-5">
