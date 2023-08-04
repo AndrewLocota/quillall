@@ -388,7 +388,7 @@ header {
   right: 0;
   background: url("/static/images/wallofhandwriting.png") repeat-x;
   background-size: auto 105%;
-  background-position: center;
+  background-position: center top;
   animation: scroll-right 30s linear infinite;
   z-index: 1;
 }
@@ -424,6 +424,7 @@ header {
   bottom: 0;
   background: url("/static/images/mask\ about.png") no-repeat;
   background-size: cover;
+  background-position: center top;
   pointer-events: none;
   z-index: 5;
   opacity: 0;
