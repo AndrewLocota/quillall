@@ -1090,3 +1090,11 @@ WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 136-051-276
 INFO:root:Received request data: {'article': 'sadasdasd\nsdsadas\nsdas', 'demographics': ['Rewr']}
 INFO:werkzeug:127.0.0.1 - - [28/Jul/2023 03:44:30] "POST /api/summarize HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:root:Received request data: {'article': 'White black\nblack White', 'demographics': ['Dummies']}
+INFO:werkzeug:127.0.0.1 - - [05/Aug/2023 01:03:36] "POST /api/summarize HTTP/1.1" 200 -

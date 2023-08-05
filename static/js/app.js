@@ -29,6 +29,8 @@ $(function () {
         source: demographics,
       });
 
+      $(".ui-helper-hidden-accessible").remove();
+
       setInterval(function () {
         let randomIndex1, randomIndex2;
         do {

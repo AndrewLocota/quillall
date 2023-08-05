@@ -5,6 +5,8 @@
   font-style: normal;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Lausanne&display=swap");
+
 body {
   font-family: "Grenette Pro SemiBold", Arial, sans-serif;
   background-color: #f0f0f0;
@@ -15,8 +17,7 @@ body {
 }
 
 header {
-  padding: 2rem;
-  margin-right: auto;
+  padding: 0.5rem;
   text-align: left;
   font-family: "Grenette Pro SemiBold", Arial, sans-serif;
   background-color: #e8e9eb;
@@ -27,21 +28,41 @@ header {
   top: 0;
   z-index: 5;
   /* Ensure it stays on top */
-  width: auto 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   user-select: none;
+  overflow: hidden;
+}
+
+.container-fluid {
+  position: sticky;
+  top: 0;
+  width: 110%;
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+h1 {
+  display: block;
+  font-size: 2rem;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  margin-left: 50px;
 }
 
 #logo {
-  height: 65px;
-  margin-right: 10px;
+  height: 4rem;
 }
 
 #symbols {
   position: fixed;
   left: 0;
-  top: 101px;
+  top: 120px;
   bottom: 0;
   margin: -13px;
   width: 66px;
@@ -87,8 +108,8 @@ section {
   width: 600px;
   height: 600px;
   margin-top: 70px;
-  transition: width 0.75s ease, height 0.75s ease, margin-top 0.75s ease;
   overflow: visible;
+  display: flex;
 }
 
 #article-input,
@@ -101,6 +122,7 @@ section {
   resize: none;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
   background-color: white;
+  transition: width 0.75s ease, height 0.75s ease, margin-top 0.75s ease;
 }
 
 #fixed-part {
@@ -207,6 +229,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 35rem;
 }
 
 #demographic-list-wrapper {
@@ -256,8 +279,10 @@ footer {
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 20px;
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  max-width: 210px;
+  background-color: white;
 }
 
 .ui-menu-item {
@@ -268,7 +293,7 @@ footer {
   background-color: #f0f0f0;
 }
 
-#clear-all {
+.ui-he #clear-all {
   display: none;
   background-color: grey;
   color: white;
@@ -283,10 +308,19 @@ footer {
 
 #clear-all.show {
   display: inline-block;
+  background-color: grey;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  width: 80px;
+  margin-left: 2vh;
+  text-align: center;
 }
 
 #clear-all:hover {
-  background-color: #808080;
+  background-color: #999898;
 }
 
 #demographic-input::placeholder {
@@ -303,7 +337,7 @@ footer {
 }
 
 #demographics h2 {
-  margin-top: -4vh;
+  margin-top: -2rem;
   margin-bottom: 0;
   margin-left: -9%;
   margin-right: 0;
@@ -412,13 +446,17 @@ textarea[hidden] {
 }
 
 .nav-button {
-  background-color: grey;
+  background-color: transparent; /* remove background */
   border: none;
-  border-radius: 5px;
-  padding: 10px;
+  padding: 0; /* remove padding */
   cursor: pointer;
-  margin-left: 10px; /* Adjust as needed */
-  color: white; /* Color of the icon */
+  color: black; /* adjust as needed */
+  position: absolute;
+  right: 27rem;
+  font-weight: bold; /* make the font bold */
+  font-size: 20px;
+  text-decoration: underline; /* underline the text */
+  display: flex;
 }
 
 .nav-button a {
