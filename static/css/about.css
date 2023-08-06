@@ -1,5 +1,4 @@
 html {
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -37,10 +36,10 @@ body {
   font-family: "Grenette Pro SemiBold", Arial, sans-serif;
   background: linear-gradient(
     to bottom,
-    black 0%,
-    black 60.9rem,
-    #f0f0f0 61rem,
-    #f0f0f0 100%
+    black 0vh,
+    black 109.9vh,
+    #f0f0f0 110vh,
+    #f0f0f0 200vh
   );
   margin: 0;
   overflow-x: hidden;
@@ -77,13 +76,14 @@ header {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua",
     Georgia, serif;
   font-weight: bold;
+  visibility: hidden;
   width: 50%;
-  height: 30%;
+  height: 110px;
   margin: 50px auto; /* Adds vertical space before and after the box and centers it horizontally */
   margin-left: 25%;
   padding: 10px;
   border: 3px solid #000; /* Changes the border to 2px and black */
-  border-radius: 4px;
+  border-radius: 8px;
   box-sizing: border-box;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
   background-color: white; /* Fills the box with white color */
@@ -91,7 +91,7 @@ header {
   display: flex; /* These three properties center the content vertically */
   justify-content: center;
   align-items: center;
-  transition: transform 1.3s ease-out;
+  transition: transform 2s ease-out;
   z-index: 10;
   position: absolute;
   color: #000;
@@ -103,7 +103,7 @@ header {
   display: flex;
   justify-content: center;
   margin-left: 30%;
-  margin-top: 500px;
+  margin-top: 100px;
 }
 
 main::before {
@@ -502,4 +502,90 @@ h1,
   width: 30%;
   height: 60%;
   margin-left: 5%;
+  visibility: visible;
+}
+
+.head-box {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua",
+    Georgia, serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 50%;
+  height: 5rem;
+  margin: 0 auto; /* This will center the box and remove vertical margins */
+  padding: 10px;
+  border: 3px solid #000;
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 2s ease-out;
+  z-index: 10;
+  color: #000;
+  overflow: hidden;
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10vh; /* You can adjust this value to bring the boxes closer or farther from the .head-box */
+  height: 200px;
+}
+
+.inner-box {
+  flex: 1;
+  padding: 10px;
+  border: 3px solid #000;
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1.5s ease-out;
+  color: #000;
+}
+
+#box1 {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua",
+    Georgia, serif;
+  font-weight: bold;
+  height: 200px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-left: 20%;
+  margin-right: 5%;
+}
+#box2 {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua",
+    Georgia, serif;
+  font-weight: bold;
+  height: 200px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#box3 {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua",
+    Georgia, serif;
+  font-weight: bold;
+  height: 200px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-left: 5%;
+  margin-right: 20%;
 }

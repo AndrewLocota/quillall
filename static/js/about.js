@@ -4,12 +4,10 @@ window.onload = function () {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0;
 
-  document.body.classList.add("no-scroll");
-
   // After 2 seconds, allow scrolling
   setTimeout(function () {
-    document.body.classList.remove("no-scroll");
-  }, 1500);
+    document.body.style.overflow = "auto";
+  }, 2000);
 
   // After 1 second, add the 'shrink' class to the '.stretchy-header' element
   setTimeout(function () {

@@ -263,6 +263,7 @@ footer {
   border: 1px solid #ccc;
   border-radius: 20px;
   white-space: nowrap;
+  background-color: #f0f0f0;
 }
 
 .remove-demographic {
