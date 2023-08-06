@@ -1,27 +1,5 @@
 $(function () {
-  fetch("demographics.json")
-    .then((response) => response.json())
-    .then((demographics) => {
-      $("#demographic-input").autocomplete({
-        source: demographics,
-      });
-    })
-    .catch((error) => console.error("Error:", error));
-
-  const editor = new EditorJS({
-    holder: "article-input",
-    tools: {
-      paragraph: {
-        class: Paragraph,
-        inlineToolbar: true,
-      },
-      // ... other tools
-    },
-  });
-
-  var clearAllButton = $("#clear-all");
-  var demographicList = $("#demographic-list");
-
+  // Fetch the list of demographics and populate the autocomplete
   fetch("demographics.json")
     .then((response) => response.json())
     .then((demographics) => {
@@ -31,6 +9,7 @@ $(function () {
 
       $(".ui-helper-hidden-accessible").remove();
 
+      // Change placeholder periodically to give examples
       setInterval(function () {
         let randomIndex1, randomIndex2;
         do {
@@ -48,6 +27,10 @@ $(function () {
     })
     .catch((error) => console.error("Error:", error));
 
+  var clearAllButton = $("#clear-all");
+  var demographicList = $("#demographic-list");
+
+  // Handle adding demographics to the list
   $("#add-demographic").click(function (event) {
     event.stopPropagation();
 
@@ -60,7 +43,6 @@ $(function () {
 
       if (demographic) {
         var li = $("<li>").addClass("demographic-item");
-
         var demographicText = $("<span>")
           .addClass("demographic-text")
           .text(demographic);
@@ -98,86 +80,66 @@ $(function () {
     $("#demographic-list-wrapper").addClass("invisible");
   });
 
-  $("#demographic-input").keypress(function (e) {
-    if (e.which == 13) {
-      e.preventDefault();
-      $("#add-demographic").click();
-    }
-  });
-
-  $("#clear-all").click(function () {
-    demographicList.empty();
-    clearAllButton.removeClass("show");
-    updateDemographicsWrapper(); // Call function here when all demographics are cleared
-  });
-
+  // Submit article content
   $("#submit-article").click(function () {
-    editor
-      .save()
-      .then((outputData) => {
-        var article = outputData.blocks
-          .map((block) => block.data.text)
-          .join("\n");
-        var demographics = [];
-        $("#demographic-list li").each(function () {
-          demographics.push($(this).find(".demographic-text").text());
+    var article = $("#article-input").val(); // Directly get the value from the textarea
+    var demographics = [];
+    $("#demographic-list li").each(function () {
+      demographics.push($(this).find(".demographic-text").text());
+    });
+
+    if (!article.trim()) {
+      $(this).addClass("shake");
+      setTimeout(() => $(this).removeClass("shake"), 350);
+      return;
+    }
+
+    console.log("Sending data:", {
+      article: article,
+      demographics: demographics,
+    });
+
+    $("#article-input").addClass("frosted-glass pop-out");
+    $("#article-input").addClass("loading");
+    $(".loader").show();
+
+    fetch("/api/summarize", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        article: article,
+        demographics: demographics,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Response from server:", data);
+
+        data.rewritten_texts.forEach(function (rewritten_text, index) {
+          var textarea = $("<textarea>")
+            .attr("id", "response-textarea-" + index)
+            .addClass("response-textarea")
+            .val(rewritten_text);
+          $("#response-container").append(textarea);
         });
 
-        if (!article.trim()) {
-          $(this).addClass("shake");
-          setTimeout(() => $(this).removeClass("shake"), 350);
-          return;
-        }
-
-        console.log("Sending data:", {
-          article: article,
-          demographics: demographics,
-        });
-
-        $("#article-input").addClass("frosted-glass pop-out");
-        $("#article-input").addClass("loading");
-        $(".loader").show();
-
-        fetch("/api/summarize", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            article: article,
-            demographics: demographics,
-          }),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Response from server:", data);
-
-            data.rewritten_texts.forEach(function (rewritten_text, index) {
-              var textarea = $("<textarea>")
-                .attr("id", "response-textarea-" + index)
-                .addClass("response-textarea")
-                .val(rewritten_text);
-              $("#response-container").append(textarea);
-            });
-
-            $("#response-container").show();
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-          })
-          .finally(() => {
-            $("#fixed-part").hide();
-            $("#article-input").removeClass("loading frosted-glass pop-out");
-            $(".loader").hide();
-            $("#article-input").hide();
-            $(".response-textarea").show();
-          });
+        $("#response-container").show();
       })
       .catch((error) => {
-        console.log("Saving failed: ", error);
+        console.error("Error:", error);
+      })
+      .finally(() => {
+        $("#fixed-part").hide();
+        $("#article-input").removeClass("loading frosted-glass pop-out");
+        $(".loader").hide();
+        $("#article-input").hide();
+        $(".response-textarea").show();
       });
   });
 
+  // Refresh the page
   $("#refresh-page").click(function () {
     location.reload();
   });

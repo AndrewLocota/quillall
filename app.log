@@ -1098,3 +1098,21 @@ WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 136-051-276
 INFO:root:Received request data: {'article': 'White black\nblack White', 'demographics': ['Dummies']}
 INFO:werkzeug:127.0.0.1 - - [05/Aug/2023 01:03:36] "POST /api/summarize HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:root:Received request data: {'article': 'Test', 'demographics': []}
+INFO:werkzeug:127.0.0.1 - - [06/Aug/2023 17:37:44] "POST /api/summarize HTTP/1.1" 200 -
+INFO:root:Received request data: {'article': 'Test', 'demographics': ['Dudes']}
+INFO:werkzeug:127.0.0.1 - - [06/Aug/2023 17:41:31] "POST /api/summarize HTTP/1.1" 200 -
+INFO:root:Received request data: {'article': 'Testosterone\n', 'demographics': ['Dudes']}
+INFO:werkzeug:127.0.0.1 - - [06/Aug/2023 17:41:44] "POST /api/summarize HTTP/1.1" 200 -
+INFO:root:Received request data: {'article': 'Testosterone\n', 'demographics': ['Dudes', 'Dudes', 'yo']}
+INFO:werkzeug:127.0.0.1 - - [06/Aug/2023 17:42:12] "POST /api/summarize HTTP/1.1" 200 -
+INFO:root:Received request data: {'article': 'Testosterone', 'demographics': ['Dudes']}
+INFO:werkzeug:127.0.0.1 - - [06/Aug/2023 17:53:48] "POST /api/summarize HTTP/1.1" 200 -
+INFO:root:Received request data: {'article': 'Testosterone', 'demographics': ['Dudes']}
+INFO:werkzeug:127.0.0.1 - - [06/Aug/2023 17:54:39] "POST /api/summarize HTTP/1.1" 200 -

@@ -17,6 +17,9 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  left: 0px;
   padding: 0.5rem;
   text-align: left;
   font-family: "Grenette Pro SemiBold", Arial, sans-serif;
@@ -36,12 +39,13 @@ header {
 }
 
 .container-fluid {
-  position: sticky;
   top: 0;
   width: 110%;
   padding-right: 0;
   margin-right: 0;
   margin-left: 0;
+  user-select: none;
+  height: 0;
 }
 
 h1 {
@@ -61,13 +65,11 @@ h1 {
 
 #symbols {
   position: fixed;
-  left: 0;
+  left: -10px;
   top: 120px;
   bottom: 0;
-  margin: -13px;
   width: 66px;
   z-index: 3;
-  /* Make sure it's on top of the line */
 }
 
 main {
@@ -76,7 +78,6 @@ main {
   line-height: 1;
   position: relative;
   /* Added for the pseudo-element */
-  user-select: none;
   padding-left: 50px;
 }
 
@@ -334,6 +335,7 @@ footer {
   user-select: none;
   justify-content: space-between; /* This will add space around items */
   align-items: center; /* This will center items vertically */
+  margin-left: 70px;
 }
 
 #demographics h2 {
@@ -452,7 +454,7 @@ textarea[hidden] {
   cursor: pointer;
   color: black; /* adjust as needed */
   position: absolute;
-  right: 27rem;
+  right: 16rem;
   font-weight: bold; /* make the font bold */
   font-size: 20px;
   text-decoration: underline; /* underline the text */
