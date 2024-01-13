@@ -52,7 +52,7 @@ def summarize():
         
         llm = OpenAI(temperature=0.25, openai_api_key=openai_api_key)
         
-        template = """Given the following text, carefully rephrase it and pick the words to be more appealing and fitting for the specified audience. Do not change the informative content. Where the text contains quotes, repeat the text inside the quotes verbatim.
+        template = """Take a deep breath. Given the following text, carefully rephrase it and carefully pick the words to be more appealing and fitting for the specified audience. Do not change the informative content. Where the text contains quotes, repeat the text inside the quotes verbatim.
 
         Text: {text}
         Demographic: {demographic}

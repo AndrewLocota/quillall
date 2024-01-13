@@ -675,9 +675,9 @@ h1,
 .left-text {
   margin: 0;
   padding: 20px;
-  font-size: 5vh;
+  font-size: 4.74vh;
   color: black;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   max-height: 5vh;
 }
