@@ -1,106 +1,242 @@
-createHTMLComponent({ html_code: `
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>QuillAll</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add Bootstrap CSS -->
     <link
-      rel="icon"
-      href="https://unsplash.it/32/32?image=883"
-      type="image/png"
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
     />
+    <link rel="stylesheet" type="text/css" href="/static/css/about.css" />
+    <link rel="icon" href="/static/images/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+    />
+    <link rel="icon" href="/static/images/favicon.png" type="image/png" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/azazdeaz/overscroll/dist/overscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <!-- Add Bootstrap JS and Popper.js just before closing body tag -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <style>
-      body {
-        font-family: "Arial", sans-serif;
-        margin: 0;
-        padding: 0;
-        color: #333;
-      }
-      header {
-        background-color: #4a4e69;
-        color: #fff;
-        text-align: center;
-        padding: 2rem 0;
-      }
-      header h1 {
-        margin: 0;
-        font-size: 2.5rem;
-      }
-      header img {
-        max-height: 100px;
-      }
-      .box-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 2rem;
-      }
-      .inner-box {
-        flex: 0 1 30%;
-        margin: 10px;
-        padding: 20px;
-        background-color: #9a8c98;
-        color: #fff;
-        text-align: center;
-        border-radius: 8px;
-      }
-      .main-body {
-        background-color: #c9ada7;
-        padding: 2rem;
-      }
-      .main-body h2 {
-        color: #22223b;
-      }
-      .highlight-box {
-        height: 200px;
-        width: 200px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #f2e9e4;
-        border-radius: 50%;
-      }
-      .navbar {
-        background-color: #22223b;
-        color: white;
-        text-align: center;
-        padding: 1rem 0;
+      #loading {
         position: fixed;
-        bottom: 0;
-        width: 100%;
+        bottom: -100px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        transition: bottom 0.5s ease-out;
       }
     </style>
   </head>
+
   <body>
     <header>
-      <h1>QuillAll</h1>
-      <img src="https://unsplash.it/400/300?image=883" alt="Logo" />
+      <div class="stretchy-header masked"></div>
+      <div class="stretchy-header-content">
+        <h1>QuillAll</h1>
+        <img src="/static/images/logo.png" alt="Logo" id="logo" />
+        <!-- <button class="nav-button">
+          <a href="/quillall">Home</a>
+        </button> -->
+      </div>
     </header>
     <main>
-      <div class="box-container">
-        <div class="inner-box" id="box1">
-          <p class="line1">Line 1 for Box 1</p>
-          <p class="line2">Line 2 for Box 1</p>
+      <img src="/static/images/symbols.png" id="symbols" />
+
+      <!-- New Box with the same format as the about-box -->
+      <div class="head-box">
+        <p>All that could be written, will be written.</p>
+      </div>
+
+      <!-- Container for box1, box2, box3 -->
+      <div class="box-container row">
+        <div class="col-lg-4 col-12">
+          <a href="/quillall" style="text-decoration: none; color: inherit">
+            <div class="inner-box" id="box1">
+              <p class="line1">Line 1 for Box 1</p>
+              <p class="line2">Line 2 for Box 1</p>
+            </div>
+          </a>
         </div>
-        <div class="inner-box" id="box2">
-          <p class="line1">Line 1 for Box 2</p>
-          <p class="line2">Line 2 for Box 2</p>
+        <div class="col-lg-4 col-12">
+          <div class="inner-box" id="box2">
+            <p class="line1">Line 1 for Box 2</p>
+            <p class="line2">Line 2 for Box 2</p>
+          </div>
         </div>
-        <div class="inner-box" id="box3">
-          <p class="line1">Line 1 for Box 3</p>
-          <p class="line2">Line 2 for Box 3</p>
+        <div class="col-lg-4 col-12">
+          <div class="inner-box" id="box3">
+            <p class="line1">Line 1 for Box 3</p>
+            <p class="line2">Line 2 for Box 3</p>
+          </div>
         </div>
       </div>
     </main>
+    <!-- <div class="about-box">
+      <p>Lorem ipsum</p>
+    </div>
+    -->
+
     <div class="main-body">
       <h2>QuillAll Dev Timeline</h2>
-      <div class="highlight-box highlight-box1"></div>
-      <div class="highlight-box highlight-box2"></div>
-      <div class="highlight-box highlight-box3"></div>
+      <div class="container-fluid">
+        <!-- Row 1: Black - White -->
+        <div class="row">
+          <div
+            class="col-lg-6 col-12"
+            style="background-color: white; min-height: 500px"
+          >
+            <p class="left-text">
+              Line 1<br />Line 2<br />Line 3<br />Line 4<br />Line 5
+            </p>
+          </div>
+          <div
+            class="col-lg-6 col-12"
+            style="
+              background-color: black;
+              min-height: 500px;
+              position: relative;
+            "
+          >
+            <div class="highlight-box highlight-box1"></div>
+          </div>
+        </div>
+
+        <!-- Row 2: White - Black -->
+        <div class="row">
+          <div
+            class="col-lg-6 col-12"
+            style="background-color: black; min-height: 500px"
+          >
+            <p class="left-text">
+              Line 1<br />Line 2<br />Line 3<br />Line 4<br />Line 5
+            </p>
+          </div>
+          <div
+            class="col-lg-6 col-12"
+            style="
+              background-color: white;
+              min-height: 500px;
+              position: relative;
+            "
+          >
+            <div class="highlight-box highlight-box2"></div>
+          </div>
+        </div>
+
+        <!-- Row 3: Black - White -->
+        <div class="row">
+          <div
+            class="col-lg-6 col-12"
+            style="background-color: white; min-height: 500px"
+          >
+            <p class="left-text">
+              Line 1<br />Line 2<br />Line 3<br />Line 4<br />Line 5
+            </p>
+          </div>
+          <div
+            class="col-lg-6 col-12"
+            style="
+              background-color: black;
+              min-height: 500px;
+              position: relative;
+            "
+          >
+            <div class="highlight-box highlight-box3"></div>
+          </div>
+        </div>
+
+        <!-- Row 4: White - Black -->
+        <div class="row">
+          <div
+            class="col-lg-6 col-12"
+            style="background-color: black; height: 500px"
+          ></div>
+          <div
+            class="col-lg-6 col-12"
+            style="background-color: black; height: 500px"
+          ></div>
+        </div>
+      </div>
+      <!--
+      <div>
+        <ul>
+          <li>
+            <div>
+              <time>April 2023</time>
+              <p>
+                Lorem ipsum
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>May 2023</time>
+              <p>
+                Lorem ipsum
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>June 2023</time>
+              <p>
+                Lorem ipsum
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>July 2023</time>
+              <p>
+                Lorem ipsum
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>Soon: August 2023</time>
+              <p>
+                Lorem ipsum
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>Soon: September 2023</time>
+              <p>
+                Lorem ipsum
+              </p>
+            </div>
+          </li>
+        </ul> -->
     </div>
-    <div class="navbar">Footer Content</div>
+    <div class="navbar" class="hidden">
+      <div id="loading" class="hidden">
+        <div class="loader"></div>
+      </div>
+    </div>
+    <script defer src="/static/js/about.js"></script>
   </body>
 </html>
-`, css_code: ``, filename: "improved_quillall_ui" })
