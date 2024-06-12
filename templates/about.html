@@ -15,7 +15,6 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
     />
     <link rel="icon" href="/static/images/favicon.png" type="image/png" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -30,7 +29,7 @@
     ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
     <script
@@ -56,9 +55,6 @@
       <div class="stretchy-header-content">
         <h1>QuillAll</h1>
         <img src="/static/images/logo.png" alt="Logo" id="logo" />
-        <!-- <button class="nav-button">
-          <a href="/quillall">Home</a>
-        </button> -->
       </div>
     </header>
     <main>
@@ -66,7 +62,19 @@
 
       <!-- New Box with the same format as the about-box -->
       <div class="head-box">
-        <p>All that could be written, will be written.</p>
+        <p>Waitlist:</p>
+        <form id="emailForm" class="form-inline">
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="emailInput"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit" class="btn btn-primary ml-2">Submit</button>
+          </div>
+        </form>
       </div>
 
       <!-- Container for box1, box2, box3 -->
@@ -102,10 +110,6 @@
         </div>
       </div>
     </main>
-    <!-- <div class="about-box">
-      <p>Lorem ipsum</p>
-    </div>
-    -->
 
     <div class="main-body">
       <h2>QuillAll Dev Timeline</h2>
@@ -141,7 +145,7 @@
           >
             <p class="left-text" style="color: white">
               <br /><br />Personalized advice for small and medium businesses to
-              thrive with AI automation<br />
+              thrive with AI automation.<br />
             </p>
           </div>
           <div

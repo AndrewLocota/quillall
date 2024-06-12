@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>React App</title>
+    <script>
+      (function () {
+        const resizeObserverLoopErrRe =
+          /^ResizeObserver loop completed with undelivered notifications\.$/;
+        const originalError = console.error;
+        console.error = (...args) => {
+          if (args[0] && resizeObserverLoopErrRe.test(args[0])) {
+            return;
+          }
+          originalError.call(console, ...args);
+        };
+
+        const oldHandler = window.onerror;
+        window.onerror = function (message, source, lineno, colno, error) {
+          if (resizeObserverLoopErrRe.test(message)) {
+            console.warn("Ignored ResizeObserver loop limit exceeded error");
+            return true;
+          }
+          if (oldHandler) {
+            return oldHandler(message, source, lineno, colno, error);
+          }
+          return false;
+        };
+
+        const oldRejectionHandler = window.onunhandledrejection;
+        window.onunhandledrejection = function (event) {
+          if (resizeObserverLoopErrRe.test(event.reason)) {
+            console.warn("Ignored ResizeObserver loop limit exceeded error");
+            event.preventDefault();
+          }
+          if (oldRejectionHandler) {
+            return oldRejectionHandler(event);
+          }
+        };
+      })();
+
+      const resizeObserverErrorHandler = (e) => {
+        if (e.message === "ResizeObserver loop limit exceeded") {
+          const resizeObserverErrDiv = document.createElement("div");
+          resizeObserverErrDiv.id = "resizeObserverErr";
+          resizeObserverErrDiv.style.display = "none";
+          document.body.appendChild(resizeObserverErrDiv);
+        }
+      };
+      window.addEventListener("error", resizeObserverErrorHandler);
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

@@ -79,3 +79,25 @@ window.addEventListener("wheel", function (e) {
     document.querySelector("#loading").style.bottom = "-200px";
   }
 });
+
+// Handle form submission
+document.getElementById("emailForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const email = document.getElementById("emailInput").value;
+
+  fetch("/api/save-email", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      alert(data.message);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      alert("An error occurred while saving the email.");
+    });
+});

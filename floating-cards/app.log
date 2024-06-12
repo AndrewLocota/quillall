@@ -1,0 +1,451 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:06:58] "[33mOPTIONS /api/summarize HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\logging\\__init__.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\flask_cors\\extension.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\flask_cors\\core.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:12:31] "[33mOPTIONS /api/summarize HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:12:54] "[33mOPTIONS /api/summarize HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:13:25] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'sad'}
+INFO:openai:error_code=invalid_api_key error_message='Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:Error during OpenAI API call: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:13:25] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:13:30] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'sad'}
+INFO:openai:error_code=invalid_api_key error_message='Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:Error during OpenAI API call: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:13:31] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:13:40] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'test'}
+INFO:openai:error_code=invalid_api_key error_message='Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:Error during OpenAI API call: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:13:40] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:17:40] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'sad'}
+INFO:openai:error_code=invalid_api_key error_message='Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:17:41] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:20:31] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'sad'}
+INFO:openai:error_code=invalid_api_key error_message='Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:20:31] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:20:45] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'dsfsd'}
+INFO:openai:error_code=invalid_api_key error_message='Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:20:45] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:root:Received request data: {'content': 'dsfsd'}
+INFO:openai:error_code=invalid_api_key error_message='Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:20:49] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:22:06] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'dsfsd'}
+INFO:openai:error_code=invalid_api_key error_message='Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:22:06] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:22:13] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'sdaa'}
+INFO:openai:error_code=invalid_api_key error_message='Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: Incorrect API key provided: your_ope*******_key. You can find your API key at https://platform.openai.com/account/api-keys.
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:22:13] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:31:34] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'sdaa'}
+INFO:openai:error_code=model_not_found error_message='The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:31:35] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:32:44] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'sdas'}
+INFO:openai:error_code=model_not_found error_message='The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:32:45] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:34:47] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'sdas'}
+INFO:openai:error_code=model_not_found error_message='The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:34:47] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:35:04] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'sdas'}
+INFO:openai:error_code=model_not_found error_message='The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:35:04] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:root:Received request data: {'content': 'sdas'}
+INFO:openai:error_code=model_not_found error_message='The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:35:07] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:root:Received request data: {'content': 'sdas'}
+INFO:openai:error_code=model_not_found error_message='The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:35:09] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:35:24] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'dg'}
+INFO:openai:error_code=model_not_found error_message='The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:35:24] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:35:34] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'sdasd'}
+INFO:openai:error_code=model_not_found error_message='The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:35:34] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:36:06] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'sdasd'}
+INFO:openai:error_code=model_not_found error_message='The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:36:06] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:39:56] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'sdasd'}
+INFO:openai:error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:39:57] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:43:03] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'sdasd'}
+INFO:openai:error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:43:04] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:43:17] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'sdasd'}
+INFO:openai:error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:43:18] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:44:43] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'sdaa'}
+INFO:openai:error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:44:44] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:45:19] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'Dadaadda'}
+INFO:openai:error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:45:19] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:48:36] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'Dadaadda'}
+INFO:openai:error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:48:36] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:52:52] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'Dadaadda'}
+INFO:openai:error_code=None error_message='This is a chat model and not supported in the v1/completions endpoint. Did you mean to use v1/chat/completions?' error_param=model error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: This is a chat model and not supported in the v1/completions endpoint. Did you mean to use v1/chat/completions?
+INFO:werkzeug:127.0.0.1 - - [10/Jun/2024 23:52:53] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:00:28] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'Dadaadda'}
+INFO:openai:error_code=None error_message='This is a chat model and not supported in the v1/completions endpoint. Did you mean to use v1/chat/completions?' error_param=model error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+ERROR:root:OpenAI API error: This is a chat model and not supported in the v1/completions endpoint. Did you mean to use v1/chat/completions?
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:00:29] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\werkzeug\\sansio\\response.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\flask\\helpers.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\openai\\api_resources\\completion.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:01:18] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'Dadaadda'}
+ERROR:root:General error: name 'client' is not defined
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:01:19] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\openai\\__init__.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:01:45] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'Dadaadda'}
+ERROR:root:General error: name 'client' is not defined
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:01:46] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:02:32] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'Sadadaa'}
+ERROR:root:General error: module 'openai' has no attribute 'chat'
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:02:32] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:03:55] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'Sdadassda'}
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:03:56] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:04:09] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'Sdadassda'}
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:04:09] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:root:Received request data: {'content': 'Sdadassda'}
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:04:12] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:root:Received request data: {'content': 'Sdadassda'}
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:04:14] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:04:34] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {data}
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:04:34] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:root:Received request data: {data}
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:04:39] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:14:02] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'ddddddddddd'}
+ERROR:root:General error: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:14:03] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:14:10] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'ddddddddddd'}
+ERROR:root:General error: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:14:11] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:14:20] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'ddddddddddd'}
+ERROR:root:General error: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:14:21] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:18:18] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'ddddddddddd'}
+ERROR:root:General error: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:18:19] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:24:50] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'Sadadaa'}
+ERROR:root:General error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:24:50] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:25:07] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'Sadadaa'}
+ERROR:root:General error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:25:08] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:root:Received request data: {'content': 'Sadadaa'}
+ERROR:root:General error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:25:11] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:26:26] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': 'Sadadaa'}
+ERROR:root:General error: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2024 00:26:27] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
