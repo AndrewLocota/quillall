@@ -1,11 +1,15 @@
 import React, { useRef, useEffect } from "react";
+import axios from "axios";
 
 const BottomPanel = ({ inputValue, setInputValue, updateBranchContent }) => {
   const inputRef = useRef(null);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.key === "Enter" && inputRef.current.value.trim() !== "") {
+      if (
+        event.key === "Enter" &&
+        String(inputRef.current.value).trim() !== ""
+      ) {
         updateBranchContent();
       }
     };
@@ -23,7 +27,7 @@ const BottomPanel = ({ inputValue, setInputValue, updateBranchContent }) => {
       <input
         ref={inputRef}
         type="text"
-        value={inputValue}
+        value={String(inputValue)}
         onChange={(e) => setInputValue(e.target.value)}
         placeholder="Enter initial content for Branch 0"
         className="bottom-panel-input"
@@ -31,7 +35,7 @@ const BottomPanel = ({ inputValue, setInputValue, updateBranchContent }) => {
       <button
         onClick={updateBranchContent}
         className="bottom-panel-button"
-        disabled={inputValue.trim() === ""}
+        disabled={String(inputValue).trim() === ""}
       >
         Update
       </button>

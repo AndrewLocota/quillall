@@ -35,7 +35,7 @@ const CustomNode = ({ id, data }) => (
   <div className="custom-node">
     <Handle type="target" position="bottom" /> {/* Target handle at bottom */}
     <div>{data.label}</div>
-    <div>{data.content}</div> {/* Display node content */}
+    <div>{String(data.content)}</div> {/* Ensure content is a string */}
     <Handle type="source" position="top" /> {/* Source handle at top */}
   </div>
 );
@@ -51,12 +51,12 @@ const TreeFlow = ({ inputValue, updateTrigger }) => {
     const updateNodeContent = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:3000/api/update_content",
-          { content: inputValue },
+          "http://localhost:5000/api/update_content",
+          { content: String(inputValue) }, // Ensure content is sent as string
           { headers: { "Content-Type": "application/json" } }
         );
 
-        const rewritten_text = response.data.rewritten_text;
+        const rewritten_text = response.data.answer;
 
         setNodes((nds) =>
           nds.map((node) =>
@@ -233,10 +233,4 @@ const TreeFlow = ({ inputValue, updateTrigger }) => {
   );
 };
 
-const TreeFlowApp = ({ inputValue, updateTrigger }) => (
-  <ReactFlowProvider>
-    <TreeFlow inputValue={inputValue} updateTrigger={updateTrigger} />
-  </ReactFlowProvider>
-);
-
-export default TreeFlowApp;
+export default TreeFlow;

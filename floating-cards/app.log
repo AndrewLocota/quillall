@@ -449,3 +449,36 @@ INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files
 INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
 INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
 INFO:werkzeug: * Restarting with watchdog (windowsapi)
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2024 00:27:41] "OPTIONS /api/update_content HTTP/1.1" 200 -
+INFO:root:Received request data: {'content': '[object Object]'}
+ERROR:root:General error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2024 00:27:41] "[35m[1mPOST /api/update_content HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Elron\\Downloads\\QuillAll_files\\floating-cards\\app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (windowsapi)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-051-276

@@ -1,15 +1,15 @@
-// src/components/App.js
 import React, { useState } from "react";
 import TreeFlowApp from "./TreeFlow";
 import BottomPanel from "./BottomPanel";
-import "./App.css";
+import "./App.css"; // Ensure you have styles for the components
 
-const App = () => {
+function App() {
   const [inputValue, setInputValue] = useState("");
-  const [updateTrigger, setUpdateTrigger] = useState(0);
+  const [updateTrigger, setUpdateTrigger] = useState(false);
 
-  const updateBranchContent = () => {
-    setUpdateTrigger((prev) => prev + 1);
+  const updateBranchContent = (rewrittenText) => {
+    setInputValue(rewrittenText);
+    setUpdateTrigger(!updateTrigger);
   };
 
   return (
@@ -24,6 +24,6 @@ const App = () => {
       />
     </div>
   );
-};
+}
 
 export default App;

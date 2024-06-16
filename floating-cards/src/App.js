@@ -1,19 +1,32 @@
-// src/App.js
-import React from "react";
-import TreeContainer from "./components/TreeContainer";
-import "./index.css";
+import React, { useState } from "react";
+import TreeFlowApp from "./components/TreeFlow";
+import BottomPanel from "./components/BottomPanel";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [inputValue, setInputValue] = useState("");
+  const [updateTrigger, setUpdateTrigger] = useState(false);
+
+  const updateBranchContent = () => {
+    setUpdateTrigger(!updateTrigger); // Toggle the update trigger to initiate the update
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="text-3xl font-bold underline">Floating Cards</h1>
-      </header>
-      <main className="p-4">
-        <TreeContainer />
-      </main>
+    <div className="app-container">
+      <ErrorBoundary>
+        <div className="treeflow-container">
+          <TreeFlowApp inputValue={inputValue} updateTrigger={updateTrigger} />
+        </div>
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <BottomPanel
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+          updateBranchContent={updateBranchContent}
+        />
+      </ErrorBoundary>
     </div>
   );
-}
+};
 
 export default App;

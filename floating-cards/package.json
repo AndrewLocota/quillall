@@ -10,7 +10,9 @@
     "autoprefixer": "^10.4.19",
     "axios": "^1.7.2",
     "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "openai": "^4.51.0",
     "postcss": "^8.4.38",
     "react": "^18.3.1",
     "react-absolute-svg-arrows": "^0.1.6",
@@ -24,7 +26,7 @@
   "scripts": {
     "start": "concurrently \"npm run start-react\" \"npm run start-server\"",
     "start-react": "react-scripts start",
-    "start-server": "python app.py",
+    "start-server": "cd server && npm install && node index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
