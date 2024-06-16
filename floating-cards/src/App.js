@@ -1,30 +1,35 @@
 import React, { useState } from "react";
-import TreeFlowApp from "./components/TreeFlow";
 import BottomPanel from "./components/BottomPanel";
-import "./App.css";
+import TreeFlow from "./components/TreeFlow";
+import axios from "axios";
 
 const App = () => {
   const [inputValue, setInputValue] = useState("");
+  const [response, setResponse] = useState("");
   const [updateTrigger, setUpdateTrigger] = useState(false);
 
-  const updateBranchContent = () => {
-    setUpdateTrigger(!updateTrigger); // Toggle the update trigger to initiate the update
+  const updateBranchContent = async () => {
+    try {
+      const res = await axios.post("http://localhost:3001/api/update_content", {
+        content: inputValue,
+      });
+      setResponse(res.data.answer);
+      setInputValue(""); // Clear input after sending it to the API
+      setUpdateTrigger((prev) => !prev); // Trigger the update in TreeFlow
+    } catch (error) {
+      console.error("Error updating content:", error);
+    }
   };
 
   return (
-    <div className="app-container">
-      <ErrorBoundary>
-        <div className="treeflow-container">
-          <TreeFlowApp inputValue={inputValue} updateTrigger={updateTrigger} />
-        </div>
-      </ErrorBoundary>
-      <ErrorBoundary>
-        <BottomPanel
-          inputValue={inputValue}
-          setInputValue={setInputValue}
-          updateBranchContent={updateBranchContent}
-        />
-      </ErrorBoundary>
+    <div>
+      <BottomPanel
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+        updateBranchContent={updateBranchContent}
+      />
+      <TreeFlow inputValue={response} updateTrigger={updateTrigger} />
+      {response && <div className="response">{response}</div>}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import axios from "axios";
 
 const BottomPanel = ({ inputValue, setInputValue, updateBranchContent }) => {
@@ -43,4 +43,31 @@ const BottomPanel = ({ inputValue, setInputValue, updateBranchContent }) => {
   );
 };
 
-export default BottomPanel;
+const App = () => {
+  const [inputValue, setInputValue] = useState("");
+  const [response, setResponse] = useState("");
+
+  const updateBranchContent = async () => {
+    try {
+      const res = await axios.post("http://localhost:3001/api/update_content", {
+        content: inputValue,
+      });
+      setResponse(res.data.answer);
+    } catch (error) {
+      console.error("Error updating content:", error);
+    }
+  };
+
+  return (
+    <div>
+      <BottomPanel
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+        updateBranchContent={updateBranchContent}
+      />
+      {response && <div className="response">{response}</div>}
+    </div>
+  );
+};
+
+export default App;

@@ -1,10 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
-import ReactFlow, {
-  useNodesState,
-  useEdgesState,
-  ReactFlowProvider,
-  Handle,
-} from "reactflow";
+import ReactFlow, { useNodesState, useEdgesState, Handle } from "reactflow";
 import "reactflow/dist/style.css";
 import axios from "axios";
 
@@ -48,32 +43,16 @@ const TreeFlow = ({ inputValue, updateTrigger }) => {
   const [nodeIdCounter, setNodeIdCounter] = useState(2);
 
   useEffect(() => {
-    const updateNodeContent = async () => {
-      try {
-        const response = await axios.post(
-          "http://localhost:5000/api/update_content",
-          { content: String(inputValue) }, // Ensure content is sent as string
-          { headers: { "Content-Type": "application/json" } }
-        );
-
-        const rewritten_text = response.data.answer;
-
-        setNodes((nds) =>
-          nds.map((node) =>
-            node.id === "1"
-              ? { ...node, data: { ...node.data, content: rewritten_text } }
-              : node
-          )
-        );
-      } catch (error) {
-        console.error("Error updating node content:", error);
-      }
-    };
-
     if (updateTrigger) {
-      updateNodeContent();
+      setNodes((nds) =>
+        nds.map((node) =>
+          node.id === "1"
+            ? { ...node, data: { ...node.data, content: inputValue } }
+            : node
+        )
+      );
     }
-  }, [inputValue, updateTrigger]);
+  }, [updateTrigger, inputValue]);
 
   const handleNodeClick = (event, node) => {
     if (!node.data.childrenCreated) {
