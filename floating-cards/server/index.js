@@ -26,7 +26,8 @@ app.post("/api/update_content", async (req, res) => {
         {
           role: "system",
           content:
-            "You are an inquisitive and novel business consultant. You will give two options as a response to the user. Preface one with 'Option 1:' and the other with 'Option 2:'.",
+            "You are an inquisitive and novel expert business consultant. You will, in 50 words, explain the business idea as given by the user to prepare it for further model analysis.",
+          //You are an inquisitive and novel expert business consultant. You will give two options as a response to the user. Preface one with 'Option 1:' and the other with 'Option 2:'.
         },
         {
           role: "user",

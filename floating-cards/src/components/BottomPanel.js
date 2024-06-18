@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
-import axios from "axios";
+import React, { useRef, useEffect } from "react";
 
 const BottomPanel = ({ inputValue, setInputValue, updateBranchContent }) => {
   const inputRef = useRef(null);
@@ -11,6 +10,7 @@ const BottomPanel = ({ inputValue, setInputValue, updateBranchContent }) => {
         String(inputRef.current.value).trim() !== ""
       ) {
         updateBranchContent();
+        setInputValue("");
       }
     };
 
@@ -20,7 +20,7 @@ const BottomPanel = ({ inputValue, setInputValue, updateBranchContent }) => {
     return () => {
       inputElement.removeEventListener("keydown", handleKeyDown);
     };
-  }, [updateBranchContent]);
+  }, [updateBranchContent, setInputValue]);
 
   return (
     <div className="bottom-panel">
@@ -29,11 +29,14 @@ const BottomPanel = ({ inputValue, setInputValue, updateBranchContent }) => {
         type="text"
         value={String(inputValue)}
         onChange={(e) => setInputValue(e.target.value)}
-        placeholder="Enter initial content for Branch 0"
+        placeholder="Enter your business' details:"
         className="bottom-panel-input"
       />
       <button
-        onClick={updateBranchContent}
+        onClick={() => {
+          updateBranchContent();
+          setInputValue("");
+        }}
         className="bottom-panel-button"
         disabled={String(inputValue).trim() === ""}
       >
@@ -43,31 +46,4 @@ const BottomPanel = ({ inputValue, setInputValue, updateBranchContent }) => {
   );
 };
 
-const App = () => {
-  const [inputValue, setInputValue] = useState("");
-  const [response, setResponse] = useState("");
-
-  const updateBranchContent = async () => {
-    try {
-      const res = await axios.post("http://localhost:3001/api/update_content", {
-        content: inputValue,
-      });
-      setResponse(res.data.answer);
-    } catch (error) {
-      console.error("Error updating content:", error);
-    }
-  };
-
-  return (
-    <div>
-      <BottomPanel
-        inputValue={inputValue}
-        setInputValue={setInputValue}
-        updateBranchContent={updateBranchContent}
-      />
-      {response && <div className="response">{response}</div>}
-    </div>
-  );
-};
-
-export default App;
+export default BottomPanel;

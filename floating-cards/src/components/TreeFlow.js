@@ -1,19 +1,17 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 import ReactFlow, { useNodesState, useEdgesState, Handle } from "reactflow";
 import "reactflow/dist/style.css";
-import axios from "axios";
 
 const initialNodes = [
   {
     id: "1",
     data: {
-      label: "0",
+      label: "", // Branch 0
       childrenCreated: false,
       collapsed: false,
-      content: "",
+      content: "Your business will go here.",
     },
-    position: { x: 250, y: 5 },
-    style: { width: 150, height: 200 },
+    position: { x: 0, y: 0 },
     draggable: false, // Make Branch 0 immovable
     type: "custom",
   },
@@ -26,14 +24,52 @@ const NODE_HEIGHT = 200;
 const MIN_DISTANCE =
   Math.max(NODE_WIDTH, NODE_HEIGHT) + Math.max(NODE_WIDTH, NODE_HEIGHT) / 2;
 
-const CustomNode = ({ id, data }) => (
-  <div className="custom-node">
-    <Handle type="target" position="bottom" /> {/* Target handle at bottom */}
-    <div>{data.label}</div>
-    <div>{String(data.content)}</div> {/* Ensure content is a string */}
-    <Handle type="source" position="top" /> {/* Source handle at top */}
-  </div>
-);
+const CustomNode = ({ id, data }) => {
+  const calculateSize = (text) => {
+    const baseWidth = 150;
+    const baseHeight = 200;
+    const charCount = text.length;
+    const scaleFactor = Math.sqrt(charCount / 20); // Adjust based on average character count fitting in base size
+    const minWidth = 150;
+    const minHeight = 200;
+    const maxWidth = 300; // Max width based on desired number of words per line
+    const newWidth = Math.max(minWidth, baseWidth * scaleFactor);
+    const newHeight = Math.max(minHeight, baseHeight * scaleFactor);
+    const aspectRatio = 3 / 4;
+
+    if (newWidth / newHeight > aspectRatio) {
+      return {
+        width: Math.min(newWidth, maxWidth),
+        height: Math.min(newWidth / aspectRatio, maxWidth / aspectRatio),
+      };
+    } else {
+      return {
+        width: Math.min(newHeight * aspectRatio, maxWidth),
+        height: Math.min(newHeight, maxWidth / aspectRatio),
+      };
+    }
+  };
+
+  const size = calculateSize(data.content);
+
+  return (
+    <div
+      className="custom-node"
+      style={{
+        width: size.width,
+        height: size.height,
+        transition: "width 0.5s, height 0.5s",
+      }}
+    >
+      <Handle type="target" position="bottom" /> {/* Target handle at bottom */}
+      <div>{data.label}</div>
+      <div style={{ wordWrap: "break-word", maxWidth: size.width }}>
+        {String(data.content)}
+      </div>
+      <Handle type="source" position="top" /> {/* Source handle at top */}
+    </div>
+  );
+};
 
 const nodeTypes = { custom: CustomNode };
 
@@ -113,7 +149,7 @@ const TreeFlow = ({ inputValue, updateTrigger }) => {
   const calculateNodePosition = (parentPosition, index) => {
     return {
       x: parentPosition.x + (index === 0 ? -150 : 150),
-      y: parentPosition.y - 200,
+      y: parentPosition.y - 200, // Move the child nodes higher on the y-axis
     };
   };
 
@@ -198,17 +234,19 @@ const TreeFlow = ({ inputValue, updateTrigger }) => {
   const memoizedNodeTypes = useMemo(() => nodeTypes, []);
 
   return (
-    <ReactFlow
-      nodes={nodes.map((node) => ({ ...node, type: "custom" }))}
-      edges={edges}
-      nodeTypes={memoizedNodeTypes}
-      onNodesChange={onNodesChange}
-      onEdgesChange={onEdgesChange}
-      onNodeClick={handleNodeClick}
-      onNodeDragStop={onNodeDragStop}
-      style={{ background: "transparent" }}
-      fitView
-    />
+    <div style={{ width: "100%", height: "100vh" }}>
+      <ReactFlow
+        nodes={nodes.map((node) => ({ ...node, type: "custom" }))}
+        edges={edges}
+        nodeTypes={memoizedNodeTypes}
+        onNodesChange={onNodesChange}
+        onEdgesChange={onEdgesChange}
+        onNodeClick={handleNodeClick}
+        onNodeDragStop={onNodeDragStop}
+        style={{ background: "transparent", width: "100%", height: "100%" }}
+        fitView
+      />
+    </div>
   );
 };
 
