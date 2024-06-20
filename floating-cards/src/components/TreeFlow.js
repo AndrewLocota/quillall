@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 import ReactFlow, { useNodesState, useEdgesState, Handle } from "reactflow";
 import "reactflow/dist/style.css";
+import axios from "axios";
 
 const initialNodes = [
   {
@@ -9,11 +10,12 @@ const initialNodes = [
       label: "", // Branch 0
       childrenCreated: false,
       collapsed: false,
-      content: "Your business will go here.",
+      content: "Business goes here.",
     },
-    position: { x: 0, y: 0 },
+    position: { x: 250, y: 5 },
     draggable: false, // Make Branch 0 immovable
     type: "custom",
+    aspectRatio: 5 / 3,
   },
 ];
 
@@ -32,7 +34,7 @@ const CustomNode = ({ id, data }) => {
     const scaleFactor = Math.sqrt(charCount / 20); // Adjust based on average character count fitting in base size
     const minWidth = 150;
     const minHeight = 200;
-    const maxWidth = 300; // Max width based on desired number of words per line
+    const maxWidth = 275; // Max width based on desired number of words per line
     const newWidth = Math.max(minWidth, baseWidth * scaleFactor);
     const newHeight = Math.max(minHeight, baseHeight * scaleFactor);
     const aspectRatio = 3 / 4;
@@ -59,11 +61,23 @@ const CustomNode = ({ id, data }) => {
         width: size.width,
         height: size.height,
         transition: "width 0.5s, height 0.5s",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
       <Handle type="target" position="bottom" /> {/* Target handle at bottom */}
       <div>{data.label}</div>
-      <div style={{ wordWrap: "break-word", maxWidth: size.width }}>
+      <div
+        style={{
+          wordWrap: "break-word",
+          maxWidth: size.width,
+          textAlign: "justify",
+          whiteSpace: "pre-wrap",
+          textAlignLast: "center",
+        }}
+      >
         {String(data.content)}
       </div>
       <Handle type="source" position="top" /> {/* Source handle at top */}
@@ -90,15 +104,39 @@ const TreeFlow = ({ inputValue, updateTrigger }) => {
     }
   }, [updateTrigger, inputValue]);
 
-  const handleNodeClick = (event, node) => {
+  const handleNodeClick = async (event, node) => {
     if (!node.data.childrenCreated) {
-      createChildNodes(node);
+      try {
+        const response = await axios.post(
+          "http://localhost:3001/api/node_click",
+          {
+            content: node.data.content,
+          }
+        );
+
+        const { answer } = response.data;
+        const option1Index = answer.indexOf("Option 1:");
+        const option2Index = answer.indexOf("Option 2:");
+
+        const option1 = answer
+          .slice(option1Index, option2Index)
+          .replace("Option 1:", "")
+          .trim();
+        const option2 = answer
+          .slice(option2Index)
+          .replace("Option 2:", "")
+          .trim();
+
+        createChildNodes(node, option1, option2);
+      } catch (error) {
+        console.error("Error processing node click:", error);
+      }
     } else {
       toggleCollapseNode(node.id);
     }
   };
 
-  const createChildNodes = (parentNode) => {
+  const createChildNodes = (parentNode, option1, option2) => {
     const parentNodeId = parentNode.id;
 
     const newNodes = [];
@@ -106,6 +144,7 @@ const TreeFlow = ({ inputValue, updateTrigger }) => {
 
     for (let i = 0; i < 2; i++) {
       const newNodeId = `${nodeIdCounter + i}`;
+      const newNodeContent = i === 0 ? option1 : option2;
       const newNode = {
         id: newNodeId,
         data: {
@@ -113,7 +152,7 @@ const TreeFlow = ({ inputValue, updateTrigger }) => {
           childrenCreated: false,
           collapsed: false,
           parentId: parentNodeId,
-          content: "New Content",
+          content: newNodeContent,
         },
         position: calculateNodePosition(parentNode.position, i),
         style: { width: NODE_WIDTH, height: NODE_HEIGHT },
