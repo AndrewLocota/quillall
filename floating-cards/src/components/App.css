@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 .App {
   text-align: center;
 }
@@ -48,4 +50,9 @@
 
 .custom-node svg {
   animation: rotate 60s linear infinite;
+}
+
+.custom-node {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }

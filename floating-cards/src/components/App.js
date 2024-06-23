@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import BottomPanel from "./BottomPanel";
 import TreeFlow from "./TreeFlow";
 import axios from "axios";
+import LandingAnimation from "./LandingAnimation"; // Import the new component
 
 const App = () => {
   const [inputValue, setInputValue] = useState("");
@@ -23,6 +24,7 @@ const App = () => {
 
   return (
     <div style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
+      <LandingAnimation /> {/* Add the landing animation here */}
       <div style={{ flex: 1, position: "relative" }}>
         <TreeFlow inputValue={branch0Content} updateTrigger={updateTrigger} />
       </div>

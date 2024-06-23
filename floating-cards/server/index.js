@@ -25,8 +25,9 @@ app.post("/api/update_content", async (req, res) => {
       messages: [
         {
           role: "system",
-          content:
-            "You are an inquisitive and novel expert business consultant. You will, in 50 words, explain the business idea as given by the user to prepare it for further model analysis.",
+          content: `You are an inquisitive and novel expert business consultant.
+          You will, in 50 words, clearly explain the business idea as given by the user
+          to prepare it for further model analysis and elaboration.`,
         },
         {
           role: "user",
@@ -53,8 +54,14 @@ app.post("/api/node_click", async (req, res) => {
       messages: [
         {
           role: "system",
-          content:
-            "You are an inquisitive and novel expert business consultant. Provide two options as a response in 20 words, taking the immediate clear and valuable next step for the idea. Preface one with 'Option 1:' and the other with 'Option 2:'.",
+          content: `You are an inquisitive and novel expert business consultant.
+          Starting from almost scratch. Help the entrepreneur realistically make it a reality step by step.
+          Provide two options as a response in max 45 words, taking the immediate clear and valuable
+          next step for the idea as given in the input. If needed, give useful advice as to which tools to use.
+          Preface one with 'Option 1:' and the other
+          with 'Option 2:'. One should be a novel idea/approach, the other the next actionable step
+          for implementing the input (do not repeat what steps are given in the input, instead move forward).
+          Assume prior logical steps have been taken. Describe the respective strategies with one or two words in caps.`,
         },
         {
           role: "user",

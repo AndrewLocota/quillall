@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo } from "react";
 import ReactFlow, { useNodesState, useEdgesState, Handle } from "reactflow";
 import "reactflow/dist/style.css";
 import axios from "axios";
+import "./App"; // Ensure you import the CSS file
 
 const initialNodes = [
   {
@@ -10,7 +11,7 @@ const initialNodes = [
       label: "", // Branch 0
       childrenCreated: false,
       collapsed: false,
-      content: "Business goes here.",
+      content: "Business goes here:",
     },
     position: { x: 250, y: 5 },
     draggable: false, // Make Branch 0 immovable
@@ -32,7 +33,7 @@ const CustomNode = ({ id, data }) => {
     const baseHeight = 200;
     const charCount = text.length;
     const scaleFactor = Math.sqrt(charCount / 20); // Adjust based on average character count fitting in base size
-    const minWidth = 150;
+    const minWidth = 170;
     const minHeight = 200;
     const maxWidth = 275; // Max width based on desired number of words per line
     const newWidth = Math.max(minWidth, baseWidth * scaleFactor);
@@ -73,9 +74,8 @@ const CustomNode = ({ id, data }) => {
         style={{
           wordWrap: "break-word",
           maxWidth: size.width,
-          textAlign: "justify",
+          textAlign: "center",
           whiteSpace: "pre-wrap",
-          textAlignLast: "center",
         }}
       >
         {String(data.content)}
@@ -187,8 +187,8 @@ const TreeFlow = ({ inputValue, updateTrigger }) => {
 
   const calculateNodePosition = (parentPosition, index) => {
     return {
-      x: parentPosition.x + (index === 0 ? -150 : 150),
-      y: parentPosition.y - 200, // Move the child nodes higher on the y-axis
+      x: parentPosition.x + (index === 0 ? -350 : 350),
+      y: parentPosition.y - 450, // Move the child nodes even higher on the y-axis
     };
   };
 
