@@ -3,6 +3,7 @@ import OpenAI from "openai";
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import path from "path"; // Add this import
 
 dotenv.config();
 
@@ -16,6 +17,10 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "build")));
+
+// API endpoints
 app.post("/api/update_content", async (req, res) => {
   try {
     const { content } = req.body;
@@ -76,6 +81,11 @@ app.post("/api/node_click", async (req, res) => {
     console.error("Error processing node click:", error);
     res.status(500).send({ error: "Failed to process node click" });
   }
+});
+
+// Handles any requests that don't match the ones above
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 const PORT = process.env.PORT || 3001;
