@@ -1,0 +1,81 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  z-index: 1000;
+  overflow: hidden;
+  transition: clip-path 1s ease-out;
+}
+
+#loading.crop-to-top {
+  animation: cropAnimation 1s forwards;
+}
+
+@keyframes cropAnimation {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 94% 0);
+  }
+}
+
+#loading .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/wallofhandwritingblurred.png"); /* Correct path */
+  background-size: auto 100%; /* Maintain original aspect ratio */
+  background-repeat: repeat-x; /* Repeat the background horizontally */
+  filter: invert(1);
+  animation: panBackground 10s linear infinite;
+  z-index: 1;
+}
+
+#logo {
+  width: 45%; /* Start as half the size of the screen */
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensure the logo is above the background */
+  animation: shrinkAndMove 2s 0.7s forwards; /* Delay of 0.7s before shrinking */
+}
+
+@keyframes panBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0; /* Move to the left */
+  }
+}
+
+@keyframes shrinkAndMove {
+  0% {
+    transform: translate(-50%, -50%) scale(1); /* Start in the center */
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.055); /* Shrink and move to top-left but stop at a specific point */
+    top: 3%;
+    left: 5%;
+  }
+}
