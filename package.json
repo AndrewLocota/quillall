@@ -30,7 +30,8 @@
     "start-server": "cd server && npm install && node index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "cp public/index.html build/index.html"
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +60,7 @@
     "concurrently": "^8.2.2"
   },
   "engines": {
-    "node": ">=14.x"
+    "node": "18.x"
   }
+  
 }
