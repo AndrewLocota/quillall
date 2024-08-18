@@ -31,7 +31,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postbuild": "cp public/index.html build/index.html"
+    "postbuild": "cpy public/index.html build/"
   },
   "eslintConfig": {
     "extends": [
@@ -57,10 +57,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "copyfiles": "^2.4.1"
   },
   "engines": {
-    "node": "18.x"
+    "node": "20.x"
   }
-  
 }
