@@ -3,6 +3,7 @@ import OpenAI from "openai";
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import path from "path"; // Import the path module
 
 dotenv.config();
 
@@ -15,6 +16,9 @@ const app = express();
 // Use CORS middleware to allow requests from different origins
 app.use(cors());
 app.use(bodyParser.json());
+
+// Serve the static files from the React app's build directory
+app.use(express.static(path.join(__dirname, "..", "build")));
 
 app.post("/api/update_content", async (req, res) => {
   try {
@@ -76,6 +80,11 @@ app.post("/api/node_click", async (req, res) => {
     console.error("Error processing node click:", error);
     res.status(500).send({ error: "Failed to process node click" });
   }
+});
+
+// Serve the React app for any unknown routes (essentially catch-all route)
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "build", "index.html"));
 });
 
 const PORT = process.env.PORT || 3001;
