@@ -24,19 +24,17 @@
     "tailwindcss": "^3.4.3",
     "web-vitals": "^2.1.4"
   },
-  
-    "scripts": {
-      "start": "node server/index.js",
-      "dev": "concurrently \"npm run start-react\" \"npm run start-server\"",
-      "start-react": "react-scripts start",
-      "start-server": "cd server && node index.js",
-      "build": "react-scripts build",
-      "test": "react-scripts test",
-      "eject": "react-scripts eject",
-      "heroku-postbuild": "npm run build",
-      "postbuild": "cpy public/index.html build/"
-    },
-  
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "concurrently \"npm run start-react\" \"npm run start-server\"",
+    "start-react": "react-scripts start",
+    "start-server": "cd server && node index.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build",
+    "postbuild": "cpy public/index.html build/"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -61,8 +59,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@aws-amplify/backend": "^1.1.1",
+    "@aws-amplify/backend-cli": "^1.2.4",
+    "aws-cdk": "^2.153.0",
+    "aws-cdk-lib": "^2.153.0",
     "concurrently": "^8.2.2",
-    "copyfiles": "^2.4.1"
+    "constructs": "^10.3.0",
+    "copyfiles": "^2.4.1",
+    "esbuild": "^0.23.1",
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4"
   },
   "engines": {
     "node": "20.x"
